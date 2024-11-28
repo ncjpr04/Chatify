@@ -25,7 +25,7 @@ export default function Home() {
   const [showRoomPopup, setShowRoomPopup] = useState<boolean>(true);
 
   useEffect(() => {
-    const ws = new WebSocket(window.location.hostname === 'localhost' ? "ws://localhost:4000" : "wss://chatify-k3qg.onrender.com");
+    const ws = new WebSocket("wss://chatify-k3qg.onrender.com");
 
 
     ws.onmessage = (event) => {
